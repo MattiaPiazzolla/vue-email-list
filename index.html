@@ -22,18 +22,14 @@
                     <div class="row">
                         <p class="text-center">Clicca qui per generare 10 email random</p>
                         <div class="d-flex justify-content-center">
-                            <button class="btn btn-sm btn-primary w-25 fs-3">Genera</button>
+                            <button class="btn btn-sm btn-primary w-25 fs-3" @click="generateTenRandomEmails">Genera</button>
                         </div>
                     </div>
                 </div>
                 <div class="outputemail mt-5">
                     <div class="row justify-content-center">
                         <ul class="list-unstyled text-center bg-primary-subtle rounded-3 p-3 w-50">
-                            <li class="m-3 p-3">TEST</li>
-                            <li class="m-3 p-3">TEST</li>
-                            <li class="m-3 p-3">TEST</li>
-                            <li class="m-3 p-3">TEST</li>
-                            <li class="m-3 p-3">TEST</li>
+                            <li v-for="(email, index) in randomEmails" class="m-3 p-3">{{ email }}</li>
                         </ul>
                     </div>
                 </div>

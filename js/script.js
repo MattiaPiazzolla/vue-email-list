@@ -11,7 +11,8 @@ createApp({
     methods: {
         // definisco la funzione per generare l'email
         generateTenRandomEmails(){
-            
+            // Azzero l'array prima di iniziare
+            this.randomEmails = [];
             // definisco un ciclo per iterare la chiamata che gerea l'email 10 volte 
             for (let i = 0; i < 10 ; i++){
                 // utilizzo la libreria axios per chiamare l'api

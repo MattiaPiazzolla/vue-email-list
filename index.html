@@ -28,9 +28,13 @@
                 </div>
                 <div class="outputemail mt-5">
                     <div class="row justify-content-center">
-                        <ul class="list-unstyled text-center bg-primary-subtle rounded-3 p-3 w-50">
+                        <ul class="list-unstyled text-center bg-primary-subtle rounded-3 p-3 w-50" v-if="randomEmails.length === 10">
                             <li v-for="(email, index) in randomEmails" class="m-3 p-3">{{ email }}</li>
                         </ul>
+                        <!-- chiedi come posso fare in modo farlo comparire solo dopo il click  -->
+                        <div v-else class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
                     </div>
                 </div>
             </div>
